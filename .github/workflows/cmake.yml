@@ -62,9 +62,9 @@ jobs:
 
       - uses: vimtor/action-zip@v1
         with:
-          files: build/ cgml.exe
+          files: build/cgml.exe
           dest: cgml.zip
       - uses: shogo82148/actions-upload-release-asset@v1
         with:
           upload_url: ${{ needs.create.outputs.url }}
-          asset_path: "build/cgml.zip"
+          asset_path: "cgml.zip"
