@@ -10,16 +10,17 @@
 > cgml
 ```
 
-3. [Shift] + [Alt] + B [Enter]
+3. [Shift] + [Alt] + B -> [Enter]
 
 # Install
 1. yEd Graph Editorをインストールする
 https://www.yworks.com/products/yed/download
 
-2. yEdインストールディレクトリに以下ページのcgml.exeをダウンロードする
-https://github.com/kirin123kirin/cgml/releases/latest
+2. [Releaseの最新バージョン](https://github.com/kirin123kirin/cgml/releases/latest)からcgml.exe.gzをダウンロードする
 
-3. yEdインストールディレクトリを環境変数PATHに追加する
+3. ダウンロードしたcgml.exe.gzをyEdインストールディレクトリに解凍する
+
+4. yEdインストールディレクトリを環境変数PATHに追加する
 
 # Environment
 * Windows
@@ -43,9 +44,10 @@ powershell
 Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/kirin123kirin/cgml/releases/download/untagged-7f4ba9e7642206440d97/art.zip" -OutFile "${ENV:TEMP}\art.zip"
 
 Expand-Archive -Force -Path "${ENV:TEMP}\art.zip" -DestinationPath .
-setx PATH %PATH;%CGML%
 
 exit
+
+setx PATH %PATH;%CGML%
 
 del %TEMP%\art.zip
 
