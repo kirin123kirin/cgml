@@ -143,7 +143,7 @@ int main(int argc, char** argv) {
         bool auto_open = !opts["no_open"].as<bool>();
 
         if(auto_open) {
-            exec("start yEd\\yEd.exe " + outpath);
+            exec("start yEd.exe " + outpath);
             std::cerr << "Opening Build GraphMLFile..." << std::endl;
             std::cerr << outpath << std::endl;
         }
