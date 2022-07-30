@@ -18,7 +18,6 @@ std::string gettmpdir() {
 
 // thanks for http://stackoverflow.com/questions/478898
 void exec(const std::string cmd) {
-    wchar_t buffer[128];
     FILE* pipe = _popen(cmd.data(), "r");
     if(!pipe)
         throw std::runtime_error("popen() failed!");
