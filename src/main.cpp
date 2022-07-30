@@ -17,22 +17,12 @@ std::string gettmpdir() {
 }
 
 // thanks for http://stackoverflow.com/questions/478898
-std::wstring exec(const std::string cmd) {
+void exec(const std::string cmd) {
     wchar_t buffer[128];
-    std::wstring result = L"";
     FILE* pipe = _popen(cmd.data(), "r");
     if(!pipe)
         throw std::runtime_error("popen() failed!");
-    try {
-        while(fgetws(buffer, sizeof buffer, pipe) != NULL) {
-            result += buffer;
-        }
-    } catch(...) {
-        _pclose(pipe);
-        throw;
-    }
     _pclose(pipe);
-    return result;
 }
 
 template <typename Container, typename T>
@@ -143,7 +133,7 @@ int main(int argc, char** argv) {
         bool auto_open = !opts["no_open"].as<bool>();
 
         if(auto_open) {
-            exec("start yEd.exe " + outpath);
+            exec("start /MIN yEd.exe " + outpath);
             std::cerr << "Opening Build GraphMLFile..." << std::endl;
             std::cerr << outpath << std::endl;
         }

@@ -1,5 +1,6 @@
-# Python C Extention Easy Core functions
-[![Cmake](https://github.com/kirin123kirin/cgml/actions/workflows/cmake.yml/badge.svg?branch=v0.6.6)](https://github.com/kirin123kirin/cgml/actions/workflows/cmake.yml)
+# Easy Network Diagram
+
+[![Cmake](https://github.com/kirin123kirin/cgml/actions/workflows/cmake.yml/badge.svg?branch=v0.1.3)](https://github.com/kirin123kirin/cgml/actions/workflows/cmake.yml)
 
 # Usage
 1. Copy Tab Separated data.
